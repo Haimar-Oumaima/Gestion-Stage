@@ -1,5 +1,6 @@
 package src.vue;
 
+import java.awt.*;
 import java.sql.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -48,10 +49,17 @@ public class ListeOffre
             table.setShowGrid(true);
             table.setShowVerticalLines(true);
             JScrollPane pane = new JScrollPane(table);
-            JFrame f = new JFrame("Remplir JTable a partir d'une BDD");
+            JFrame f = new JFrame("Liste Offres");
+            JLabel lblNewLabel = new JLabel("La liste de vos offres de stage");
+            lblNewLabel.setForeground(new Color(0, 0, 128));
+            lblNewLabel.setFont(new Font("Kokonor", Font.BOLD, 30));
+            lblNewLabel.setBounds(353, 0, 140, 56);
             JPanel panel = new JPanel();
+            panel.add(lblNewLabel);
             panel.add(pane);
             f.add(panel);
+            panel.add(lblNewLabel);
+
             f.setSize(800, 700);
             f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             f.setVisible(true);

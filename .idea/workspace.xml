@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="ajout liste offre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/ListeOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListeOffre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/OffreStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/OffreStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.src.vue.Login">
+  <component name="RunManager" selected="Application.src.vue.Menu">
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.vue.Login" />
       <module name="gestion-stage" />
@@ -115,8 +116,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.src.vue.Login" />
         <item itemvalue="Application.src.vue.Menu" />
+        <item itemvalue="Application.src.vue.Login" />
         <item itemvalue="Application.src.vue.ListeOffre" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.src.vue.Logiin" />
@@ -136,7 +137,7 @@
       <workItem from="1653783116174" duration="1929000" />
       <workItem from="1653856682483" duration="5793000" />
       <workItem from="1653871599670" duration="806000" />
-      <workItem from="1653873245231" duration="8996000" />
+      <workItem from="1653873245231" duration="10157000" />
     </task>
     <task id="LOCAL-00001" summary="interface connexion &amp; ajout offre &amp; Menu">
       <created>1653887373878</created>
@@ -159,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653889572355</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ajout liste offre">
+      <created>1653889958018</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653889958018</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
