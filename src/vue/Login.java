@@ -104,12 +104,12 @@ public class Login extends JFrame implements ActionListener {
             }
 
         }
-        //Coding Part of RESET button
+        // RESET button
         if (e.getSource() == resetButton) {
             userTextField.setText("");
             passwordField.setText("");
         }
-        //Coding Part of showPassword JCheckBox
+        //showPassword JCheckBox
         if (e.getSource() == showPassword) {
             if (showPassword.isSelected()) {
                 passwordField.setEchoChar((char) 0);
