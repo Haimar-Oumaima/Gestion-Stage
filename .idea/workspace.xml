@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="interface connexion &amp; ajout offre &amp; Menu">
-      <change afterPath="$PROJECT_DIR$/src/controller/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Main.java" afterDir="false" />
+    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="ajout liste offre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/OffreStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/OffreStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.src.vue.Menu">
+  <component name="RunManager" selected="Application.src.vue.Login">
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.vue.Login" />
       <module name="gestion-stage" />
@@ -117,10 +115,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.src.vue.Login" />
         <item itemvalue="Application.src.vue.Menu" />
         <item itemvalue="Application.src.vue.ListeOffre" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.src.vue.Login" />
         <item itemvalue="Application.src.vue.Logiin" />
       </list>
     </recent_temporary>
@@ -138,7 +136,7 @@
       <workItem from="1653783116174" duration="1929000" />
       <workItem from="1653856682483" duration="5793000" />
       <workItem from="1653871599670" duration="806000" />
-      <workItem from="1653873245231" duration="8580000" />
+      <workItem from="1653873245231" duration="8996000" />
     </task>
     <task id="LOCAL-00001" summary="interface connexion &amp; ajout offre &amp; Menu">
       <created>1653887373878</created>
@@ -154,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653887479225</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ajout liste offre">
+      <created>1653889572355</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1653889572355</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +178,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="interface connexion &amp; ajout offre &amp; Menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="interface connexion &amp; ajout offre &amp; Menu" />
+    <MESSAGE value="ajout liste offre" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout liste offre" />
   </component>
 </project>
