@@ -59,6 +59,7 @@ public class Menu extends JFrame {
         JButton btnConsulterMesOffres = new JButton("Consulter mes offres");
         btnConsulterMesOffres.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                ListeOffre listeOffre=new ListeOffre();
             }
         });
         btnConsulterMesOffres.setBounds(287, 243, 271, 83);

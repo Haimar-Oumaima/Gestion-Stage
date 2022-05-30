@@ -32,7 +32,9 @@ public class Login extends JFrame implements ActionListener {
     JButton resetButton = new JButton("RESET");
     JCheckBox showPassword = new JCheckBox("Show Password");
 
-    JLabel lblNewLabel = new JLabel("Se Connecter");
+    JLabel lblSeConnecter = new JLabel("Se Connecter");
+
+    JLabel lblMonStage = new JLabel("Mon Stage");
 
 
     Login() {
@@ -57,15 +59,18 @@ public class Login extends JFrame implements ActionListener {
         showPassword.setBounds(380, 350, 150, 30);
         loginButton.setBounds(230, 400, 100, 30);
         resetButton.setBounds(430, 400, 100, 30);
-        lblNewLabel.setBounds(280, 50, 322, 77);
+        lblSeConnecter.setBounds(280, 130, 322, 77);
+        lblMonStage.setBounds(280, 30, 322, 77);
         setBounds(10, 10, 800, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
     }
 
     public void setForegroundFont() {
-        lblNewLabel.setForeground(new Color(0, 0, 51));
-        lblNewLabel.setFont(new Font("Helvetica Neue", Font.BOLD, 26));
+        lblSeConnecter.setForeground(new Color(0, 0, 51));
+        lblMonStage.setForeground(new Color(0, 0, 52));
+        lblSeConnecter.setFont(new Font("Helvetica Neue", Font.BOLD, 22));
+        lblMonStage.setFont(new Font("Helvetica Neue", Font.BOLD, 26));
     }
 
     public void addComponentsToContainer() {
@@ -76,7 +81,8 @@ public class Login extends JFrame implements ActionListener {
         container.add(showPassword);
         container.add(loginButton);
         container.add(resetButton);
-        container.add(lblNewLabel);
+        container.add(lblSeConnecter);
+        container.add(lblMonStage);
     }
 
     public void addActionEvent() {
