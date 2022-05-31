@@ -34,7 +34,7 @@ public class Login extends JFrame implements ActionListener {
 
     JLabel lblSeConnecter = new JLabel("Se Connecter");
 
-    JLabel lblMonStage = new JLabel("Mon Stage");
+    JLabel lblMonStage = new JLabel("Mon Stage (admin)");
 
 
     Login() {
@@ -60,7 +60,7 @@ public class Login extends JFrame implements ActionListener {
         loginButton.setBounds(230, 400, 100, 30);
         resetButton.setBounds(430, 400, 100, 30);
         lblSeConnecter.setBounds(280, 130, 322, 77);
-        lblMonStage.setBounds(280, 30, 322, 77);
+        lblMonStage.setBounds(230, 30, 322, 77);
         setBounds(100, 100, 800, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
@@ -103,8 +103,8 @@ public class Login extends JFrame implements ActionListener {
             if (userText.equalsIgnoreCase("oumaima") && pwdText.equalsIgnoreCase("haimar")) {
                 JOptionPane.showMessageDialog(this, "Login Successful");
                 setVisible(false);
-                Menu menu=new Menu();
-                menu.setVisible(true);
+               EspaceAdmin admin=new EspaceAdmin();
+                admin.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(this, "Invalid Username or Password");
             }
@@ -122,8 +122,6 @@ public class Login extends JFrame implements ActionListener {
             } else {
                 passwordField.setEchoChar('*');
             }
-
-
         }
     }
 

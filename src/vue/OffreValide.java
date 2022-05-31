@@ -11,7 +11,7 @@ public class OffreValide
 {
 
 
-    public OffreValide()
+    public OffreValide(String type)
     {
         try
         {
@@ -75,6 +75,18 @@ public class OffreValide
             panel.add(lblNewLabel);
             panel.add(pane);
             f.add(panel);
+
+            if(type.equals("Convention"))
+            {
+                JButton btnEtablConv = new JButton("Etablir ma convention");
+                btnEtablConv.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+
+                    }
+                });
+                btnEtablConv.setBounds(200, 400, 117, 29);
+                panel.add(btnEtablConv);
+            }
 
             JButton btnNewButton_1 = new JButton("Retour");
             btnNewButton_1.addActionListener(new ActionListener() {

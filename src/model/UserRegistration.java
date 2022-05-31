@@ -1,5 +1,8 @@
 package src.model;
 
+import src.vue.EspaceAdmin;
+import src.vue.Menu;
+
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -52,7 +55,7 @@ public class UserRegistration extends JFrame {
     public UserRegistration() {
         setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\User\\Desktop\\STDM.jpg"));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(450, 190, 800, 700);
+        setBounds(100, 100, 800, 700);
         setResizable(false);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -168,6 +171,17 @@ public class UserRegistration extends JFrame {
                 }
             }
         });
+        JButton btnNewButton_1 = new JButton("Retour");
+        btnNewButton_1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                EspaceAdmin espaceAdmin = new EspaceAdmin();
+                espaceAdmin.setVisible(true);
+            }
+        });
+        btnNewButton_1.setBounds(41, 27, 117, 29);
+        contentPane.add(btnNewButton_1);
+
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 22));
         btnNewButton.setBounds(300, 447, 259, 74);
         contentPane.add(btnNewButton);

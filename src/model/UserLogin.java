@@ -59,40 +59,40 @@ public class UserLogin extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("Login");
+        JLabel lblNewLabel = new JLabel("Mon Stage");
         lblNewLabel.setForeground(Color.BLACK);
         lblNewLabel.setFont(new Font("Times New Roman", Font.PLAIN, 46));
-        lblNewLabel.setBounds(323, 13, 273, 93);
+        lblNewLabel.setBounds(300, 13, 273, 93);
         contentPane.add(lblNewLabel);
 
         textField = new JTextField();
-        textField.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        textField.setBounds(381, 170, 281, 68);
+        textField.setFont(new Font("Tahoma", Font.PLAIN, 25));
+        textField.setBounds(300, 190, 281, 68);
         contentPane.add(textField);
         textField.setColumns(10);
 
         passwordField = new JPasswordField();
-        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 32));
-        passwordField.setBounds(381, 286, 281, 68);
+        passwordField.setFont(new Font("Tahoma", Font.PLAIN, 25));
+        passwordField.setBounds(300, 306, 281, 68);
         contentPane.add(passwordField);
 
         JLabel lblUsername = new JLabel("Username");
         lblUsername.setBackground(Color.BLACK);
         lblUsername.setForeground(Color.BLACK);
-        lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 31));
-        lblUsername.setBounds(150, 166, 193, 52);
+        lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 25));
+        lblUsername.setBounds(150, 186, 193, 52);
         contentPane.add(lblUsername);
 
         JLabel lblPassword = new JLabel("Password");
         lblPassword.setForeground(Color.BLACK);
         lblPassword.setBackground(Color.CYAN);
-        lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 31));
-        lblPassword.setBounds(150, 286, 193, 52);
+        lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 25));
+        lblPassword.setBounds(150, 306, 193, 52);
         contentPane.add(lblPassword);
 
         btnNewButton = new JButton("Login");
         btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 26));
-        btnNewButton.setBounds(445, 392, 162, 73);
+        btnNewButton.setBounds(350, 450, 162, 73);
         btnNewButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {

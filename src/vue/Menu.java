@@ -71,16 +71,18 @@ public class Menu extends  JFrame  {
         btnOffreValides.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                OffreValide offreValide =new OffreValide();
+                OffreValide offreValide =new OffreValide("Offre Validées");
 
             }
         });
         btnOffreValides.setBounds(287, 375, 271, 83);
         contentPane.add(btnOffreValides);
 
-        JButton btnConvention = new JButton("Convention");
+        JButton btnConvention = new JButton("Etablir Convention");
         btnConvention.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new OffreValide("Convention");
             }
         });
         btnConvention.setBounds(287, 500, 271, 83);
