@@ -157,10 +157,10 @@ public class UserRegistration extends JFrame {
                     Statement sta = con.createStatement();
                     int x = sta.executeUpdate(query);
                     if (x == 0) {
-                        JOptionPane.showMessageDialog(btnNewButton, "This is alredy exist");
+                        JOptionPane.showMessageDialog(btnNewButton, "Ce compte existe déjà");
                     } else {
                         JOptionPane.showMessageDialog(btnNewButton,
-                                "Welcome, " + msg + "Your account is sucessfully created");
+                                "Welcome, " + msg + "Votre compte a été créé avec succès");
                     }
                     con.close();
                 } catch (Exception exception) {
