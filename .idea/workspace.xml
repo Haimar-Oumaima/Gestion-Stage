@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="gestion-stage:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="ajout liste offre">
+    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="update OffreStage">
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/UserHome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/UserLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/UserRegistration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/OffreValide.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/ListeOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListeOffre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/OffreStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/OffreStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,10 +50,10 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -48,20 +61,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.src.vue.Menu">
-    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.vue.Login" />
-      <module name="gestion-stage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.vue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.UserRegistration">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.model.Main" />
       <module name="gestion-stage" />
@@ -88,8 +88,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.vue.ListeOffre" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.vue.ListeOffre" />
+    <configuration name="UserRegistration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.model.UserRegistration" />
+      <module name="gestion-stage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src.vue.Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.vue.Login" />
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
@@ -101,8 +114,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.vue.Logiin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.vue.Logiin" />
+    <configuration name="src.vue.OffreStage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.vue.OffreStage" />
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
@@ -116,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.src.vue.Menu" />
+        <item itemvalue="Application.UserRegistration" />
         <item itemvalue="Application.src.vue.Login" />
-        <item itemvalue="Application.src.vue.ListeOffre" />
+        <item itemvalue="Application.Menu" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.src.vue.Logiin" />
+        <item itemvalue="Application.src.vue.OffreStage" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +150,9 @@
       <workItem from="1653783116174" duration="1929000" />
       <workItem from="1653856682483" duration="5793000" />
       <workItem from="1653871599670" duration="806000" />
-      <workItem from="1653873245231" duration="10157000" />
+      <workItem from="1653873245231" duration="19649000" />
+      <workItem from="1653949086328" duration="2928000" />
+      <workItem from="1653952378143" duration="6827000" />
     </task>
     <task id="LOCAL-00001" summary="interface connexion &amp; ajout offre &amp; Menu">
       <created>1653887373878</created>
@@ -167,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653889958018</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update OffreStage">
+      <created>1653894292791</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653894292791</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +209,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="interface connexion &amp; ajout offre &amp; Menu" />
     <MESSAGE value="ajout liste offre" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout liste offre" />
+    <MESSAGE value="update OffreStage" />
+    <option name="LAST_COMMIT_MESSAGE" value="update OffreStage" />
   </component>
 </project>

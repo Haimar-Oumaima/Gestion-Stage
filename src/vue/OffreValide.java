@@ -7,21 +7,20 @@ import java.sql.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class ListeOffre
+public class OffreValide
 {
 
 
-    public ListeOffre()
+    public OffreValide()
     {
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage","root","root");
 
-
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            String query = "SELECT * FROM offre";
+            String query = "SELECT * FROM offre WHERE statut = 1";
 
             Statement stm = con.createStatement();
             ResultSet res = stm.executeQuery(query);
@@ -56,8 +55,7 @@ public class ListeOffre
                 i++;
             }
 
-
-        JLabel lblNewLabel = new JLabel("La liste de vos offres de stage");
+            JLabel lblNewLabel = new JLabel("La liste de vos offres de stage Validées");
             lblNewLabel.setForeground(new Color(0, 0, 128));
             lblNewLabel.setFont(new Font("Kokonor", Font.BOLD, 30));
             lblNewLabel.setBounds(353, 0, 140, 60);
@@ -72,7 +70,7 @@ public class ListeOffre
             table.setShowGrid(true);
             table.setShowVerticalLines(true);
             JScrollPane pane = new JScrollPane(table);
-            JFrame f = new JFrame("Liste Offres");
+            JFrame f = new JFrame("Liste Offres Validées");
             JPanel panel = new JPanel();
             panel.add(lblNewLabel);
             panel.add(pane);

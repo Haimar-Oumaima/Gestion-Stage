@@ -61,7 +61,7 @@ public class Login extends JFrame implements ActionListener {
         resetButton.setBounds(430, 400, 100, 30);
         lblSeConnecter.setBounds(280, 130, 322, 77);
         lblMonStage.setBounds(280, 30, 322, 77);
-        setBounds(10, 10, 800, 700);
+        setBounds(100, 100, 800, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
     }

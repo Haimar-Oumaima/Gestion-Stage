@@ -24,7 +24,7 @@ public class OffreStage extends JFrame {
     private JTextField textField_4;
     private JTextField textField_0;
     private JLabel lblNewLabel_6;
-    int i=2;
+
 
     /**
      * Launch the application.
@@ -130,9 +130,9 @@ public class OffreStage extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 try {
-                    PreparedStatement pst= Connexion.GetCon().prepareStatement("INSERT INTO offre VALUES(?,?,?,?,?,?,?)");
+                    PreparedStatement pst= Connexion.GetCon().prepareStatement("INSERT INTO offre(user_id, entrepriseAccueil, sujetStage, missions, poste, lieu, montantIdemnite) VALUES(?,?,?,?,?,?,?)");
                     pst.clearParameters();
-                    pst.setInt(1,i++); //ici faut regler le autoIncrement
+                    pst.setString(1,1+"");
                     pst.setString(2,textField_0.getText());
                     pst.setString(3,textField.getText());
                     pst.setString(4,textField_1.getText());

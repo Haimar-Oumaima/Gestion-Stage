@@ -12,7 +12,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Menu extends JFrame {
+public class Menu extends  JFrame  {
 
     private JPanel contentPane;
 
@@ -20,6 +20,7 @@ public class Menu extends JFrame {
      * Launch the application.
      */
     public static void main(String[] args) {
+        System.out.println();
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
@@ -59,7 +60,8 @@ public class Menu extends JFrame {
         JButton btnConsulterMesOffres = new JButton("Consulter mes offres");
         btnConsulterMesOffres.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                ListeOffre listeOffre=new ListeOffre();
+                setVisible(false);
+               new ListeOffre();
             }
         });
         btnConsulterMesOffres.setBounds(287, 243, 271, 83);
@@ -68,6 +70,9 @@ public class Menu extends JFrame {
         JButton btnOffreValides = new JButton("Offre Validées");
         btnOffreValides.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                OffreValide offreValide =new OffreValide();
+
             }
         });
         btnOffreValides.setBounds(287, 375, 271, 83);
