@@ -29,28 +29,20 @@ public class ListeOffre
 
             int i = 0;
             while (res.next()) {
-                int id = res.getInt("id_offre");
+                int id = res.getInt("id");
                 String entrepriseAccueil = res.getString("entrepriseAccueil");
                 String sujetStage = res.getString("sujetStage");
                 String missions = res.getString("missions");
                 String poste = res.getString("poste");
                 String lieu = res.getString("lieu");
                 String montantIdemnite = res.getString("montantIdemnite");
-                String statut = res.getString("statut");
-                if(statut.equals("1"))
-                {
-                    statut = "Validé";
-                }else {
-                    statut = "Non Validé";
-                }
-                data[i][0] = id + "";
-                data[i][1] = entrepriseAccueil;
-                data[i][2] = sujetStage;
-                data[i][3] = missions;
-                data[i][4] = poste;
-                data[i][5] = lieu;
-                data[i][6] = montantIdemnite;
-                data[i][7] = statut;
+
+                data[i][0] = entrepriseAccueil;
+                data[i][1] = sujetStage;
+                data[i][2] = missions;
+                data[i][3] = poste;
+                data[i][4] = lieu;
+                data[i][5] = montantIdemnite;
                 i++;
             }
 
@@ -61,12 +53,7 @@ public class ListeOffre
             lblNewLabel.setBounds(353, 0, 140, 60);
 
             DefaultTableModel model = new DefaultTableModel(data, columns);
-            JTable table = new JTable(model){
-                public Class getColumnClass(int column) {
-                    //renvoie Boolean.class
-                    return getValueAt(0, column).getClass();
-                }
-            };
+            JTable table = new JTable(model);
             table.setShowGrid(true);
             table.setShowVerticalLines(true);
             JScrollPane pane = new JScrollPane(table);
@@ -76,16 +63,16 @@ public class ListeOffre
             panel.add(pane);
             f.add(panel);
 
-            JButton btnNewButton_1 = new JButton("Retour");
-            btnNewButton_1.addActionListener(new ActionListener() {
+            JButton btnRetour = new JButton("Retour");
+            btnRetour.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     f.dispose();
                     Menu menu=new Menu();
                     menu.setVisible(true);
                 }
             });
-            btnNewButton_1.setBounds(41, 27, 117, 29);
-            panel.add(btnNewButton_1);
+            btnRetour.setBounds(41, 27, 117, 29);
+            panel.add(btnRetour);
 
             f.setSize(800, 700);
             f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

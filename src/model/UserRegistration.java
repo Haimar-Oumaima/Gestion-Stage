@@ -8,10 +8,7 @@ import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -139,7 +136,7 @@ public class UserRegistration extends JFrame {
                 String firstName = firstname.getText();
                 String lastName = lastname.getText();
                 String emailId = email.getText();
-                String userName = (String) username.getSelectedItem();
+                String role = (String) username.getSelectedItem();
                 String mobileNumber = mob.getText();
                 int len = mobileNumber.length();
                 String password = passwordField.getText();
@@ -154,18 +151,27 @@ public class UserRegistration extends JFrame {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage","root","root");
 
-                    String query = "INSERT INTO account values('" + firstName + "','" + lastName + "','" + userName + "','" +
-                            password + "','" + emailId + "','" + mobileNumber + "')";
+                    String query = "insert into account (firstname,lastname,email,role,phone_number,password) values (?,?,?,?,?,?)";
 
-                    Statement sta = con.createStatement();
-                    int x = sta.executeUpdate(query);
-                    if (x == 0) {
-                        JOptionPane.showMessageDialog(btnNewButton, "Ce compte existe déjà");
-                    } else {
-                        JOptionPane.showMessageDialog(btnNewButton,
-                                "Welcome, " + msg + "Votre compte a été créé avec succès");
+                    PreparedStatement pst = con.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
+
+                    pst.setString(1, firstName);
+                    pst.setString(2, lastName);
+                    pst.setString(3, emailId);
+                    pst.setString(4, role);
+                    pst.setString(5, mobileNumber);
+                    pst.setString(6, password);
+
+                    pst.executeUpdate();
+                    ResultSet rs = pst.getGeneratedKeys();
+
+                    rs.next();
+                    int idResult = rs.getInt(1);
+
+
+                    if (idResult > 0) {
+                        JOptionPane.showMessageDialog(btnNewButton, "Account created successfully");
                     }
-                    con.close();
                 } catch (Exception exception) {
                     exception.printStackTrace();
                 }

@@ -12,7 +12,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -100,19 +99,31 @@ public class UserLogin extends JFrame {
                 String password = passwordField.getText();
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
-                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage","root","root");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage", "root", "root");
 
                     PreparedStatement st = (PreparedStatement) con
-                            .prepareStatement("Select first_name, password from account where first_name=? and password=?");
+                            .prepareStatement("Select * from account where firstname=? and password=?");
 
                     st.setString(1, userName);
                     st.setString(2, password);
                     ResultSet rs = st.executeQuery();
                     if (rs.next()) {
-                        dispose();
-                        Menu menu=new Menu();
-                        menu.setVisible(true);
-                        JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie");
+                        int idUser = rs.getInt("id");
+
+                        if (rs.getString("role").equals("Etudiant")) {
+
+                            dispose();
+                            Menu menu = new Menu(idUser);
+                            menu.setVisible(true);
+                            JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie etudiant");
+                        } else if (rs.getString("role").equals("Directeur")) {
+                            dispose();
+                            JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie direct");
+                        } else if (rs.getString("role").equals("Admin")) {
+                            dispose();
+                            JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie admin");
+                        }
+
                     } else {
                         JOptionPane.showMessageDialog(btnNewButton, "mauvais identifiant ou mot de passe");
                     }
@@ -125,7 +136,6 @@ public class UserLogin extends JFrame {
         });
 
         contentPane.add(btnNewButton);
-
         label = new JLabel("");
         label.setBounds(0, 0, 1008, 562);
         contentPane.add(label);
