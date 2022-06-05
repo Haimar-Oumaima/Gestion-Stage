@@ -5,7 +5,7 @@ import java.sql.*;
 import java.sql.Connection;
 
 /**
- * @author HP
+ * @author Oumaima
  *
  *
  */
@@ -14,9 +14,7 @@ public class Connexion {
     public static Connection GetCon()
 
     {
-
         try {
-
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage","root","root");
             return con;

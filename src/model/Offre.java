@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.*;
 
 
-public class DetailsOffre {
+public class Offre {
     String entrepriseAccueil;
     String sujetStage;
     String missions;
@@ -17,7 +17,7 @@ public class DetailsOffre {
     int idOffre;
     int idUser;
 
-    public DetailsOffre(int id) throws ClassNotFoundException, SQLException {
+    public Offre(int id) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage", "root", "root");
 
@@ -43,10 +43,11 @@ public class DetailsOffre {
     }
 
 
-    public DetailsOffre(int idOffre, int idUser) throws SQLException, ClassNotFoundException {
+    public Offre(int idOffre, int idUser) throws SQLException, ClassNotFoundException {
         this.idUser = idUser;
         initializeWithIdUser(idOffre, idUser);
     }
+
 
     private void initializeWithIdUser(int idOffre, int idUser) throws SQLException, ClassNotFoundException {
         Class.forName("com.mysql.cj.jdbc.Driver");

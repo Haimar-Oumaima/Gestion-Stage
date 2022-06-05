@@ -1,5 +1,7 @@
 package src.vue;
 
+import src.model.CatalogueOffre;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;

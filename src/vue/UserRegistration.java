@@ -1,7 +1,4 @@
-package src.model;
-
-import src.vue.EspaceAdmin;
-import src.vue.Menu;
+package src.vue;
 
 import java.awt.EventQueue;
 import java.awt.Font;

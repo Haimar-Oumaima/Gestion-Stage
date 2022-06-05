@@ -6,18 +6,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="navigation entre fenetre @ EspaceCommision @ mise a jour selected offre">
-      <change afterPath="$PROJECT_DIR$/src/model/ConventionModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vue/CatalogueOffre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vue/ConventionVue.java" afterDir="false" />
+    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="lastt">
+      <change afterPath="$PROJECT_DIR$/src/controller/GetAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Catalogue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Convention.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/CatalogueOffreVue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/Catalogue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/DetailsOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DetailsOffre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/DetailsOffreVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/DetailsOffreVue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/DetailsOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Offre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/UserLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/UserRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/UserRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sql/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sql/Connexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/CatalogueOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/CatalogueOffre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/ConventionVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ConventionVue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/EspaceAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/EspaceAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/EspaceCommision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/EspaceCommision.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/ListEtudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Etudiant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/ListeOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListeOffre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/OffreValide.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,71 +44,41 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="29ob9LBx6Zcm6dB71NNP6eSs24d" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-18",
+    "last_opened_file_path": "/Users/oumaimahaimar/Desktop/gestion-stage/src/controller",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Application.UserLogin">
-    <configuration name="ConventionVue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.vue.ConventionVue" />
-      <module name="gestion-stage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LoginAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.vue.LoginAdmin" />
-      <module name="gestion-stage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.model.UserLogin" />
-      <module name="gestion-stage" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="src.vue.EspaceAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.src.vue.EspaceAdmin">
+    <configuration name="EspaceAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.vue.EspaceAdmin" />
       <module name="gestion-stage" />
       <extension name="coverage">
@@ -114,8 +91,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="src.vue.Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.vue.Menu" />
+      <module name="gestion-stage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src.vue.ConventionVue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.vue.ConventionVue" />
+      <module name="gestion-stage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src.vue.LoginAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.vue.LoginAdmin" />
+      <module name="gestion-stage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="src.vue.UserLogin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.vue.UserLogin" />
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
@@ -129,10 +145,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserLogin" />
-        <item itemvalue="Application.ConventionVue" />
         <item itemvalue="Application.src.vue.EspaceAdmin" />
+        <item itemvalue="Application.src.vue.UserLogin" />
         <item itemvalue="Application.src.vue.LoginAdmin" />
+        <item itemvalue="Application.src.vue.ConventionVue" />
         <item itemvalue="Application.src.vue.Menu" />
       </list>
     </recent_temporary>
@@ -157,7 +173,8 @@
       <workItem from="1654310805174" duration="598000" />
       <workItem from="1654358733481" duration="6266000" />
       <workItem from="1654371668461" duration="32655000" />
-      <workItem from="1654436966114" duration="14064000" />
+      <workItem from="1654436966114" duration="14167000" />
+      <workItem from="1654453734607" duration="10009000" />
     </task>
     <task id="LOCAL-00001" summary="interface connexion &amp; ajout offre &amp; Menu">
       <created>1653887373878</created>

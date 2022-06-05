@@ -1,6 +1,6 @@
 package src.vue;
 
-import src.model.DetailsOffre;
+import src.model.Offre;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -178,7 +178,7 @@ public class ListeOffre
                     String IdOffre = (String) table.getValueAt(row, 0);
                     if (IdOffre != null) {
                         try {
-                            new DetailsOffre(parseInt(IdOffre.toString()) , idUser);
+                            new Offre(parseInt(IdOffre.toString()) , idUser);
                 } catch (SQLException ex) {
                             throw new RuntimeException(ex);
                         } catch (ClassNotFoundException ex) {

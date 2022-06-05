@@ -1,7 +1,4 @@
-package src.model;
-
-import src.vue.EspaceCommision;
-import src.vue.Menu;
+package src.vue;
 
 import java.awt.Color;
 import java.awt.EventQueue;

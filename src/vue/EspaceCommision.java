@@ -1,7 +1,7 @@
 package src.vue;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import src.model.CatalogueOffre;
+import src.model.Etudiant;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -52,7 +52,7 @@ public class EspaceCommision extends JFrame {
         btnConsulterListEtudiant.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                ListEtudiant listeEtudiant = new ListEtudiant("Espace Commision");
+                Etudiant listeEtudiant = new Etudiant("Espace Commision");
             }
         });
         btnConsulterListEtudiant.setBounds(447, 383, 227, 78);

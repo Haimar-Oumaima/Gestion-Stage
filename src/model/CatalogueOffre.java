@@ -1,4 +1,9 @@
-package src.vue;
+package src.model;
+
+import src.vue.ConventionVue;
+import src.vue.EspaceCommision;
+import src.vue.ListeOffre;
+import src.vue.Menu;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -130,7 +135,7 @@ public class CatalogueOffre {
                     if(type.equals("commision")){
                         new EspaceCommision().setVisible(true);
                     }else {
-                        Menu menu = new Menu();
+                        src.vue.Menu menu = new Menu();
                         menu.setVisible(true);
                     }
                 }
@@ -256,6 +261,15 @@ public class CatalogueOffre {
             lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 28));
             lblNewLabel.setBounds(353, 0, 140, 60);
 
+            JButton btnNewButton = new JButton("Retour");
+            btnNewButton.setBounds(10, 11, 89, 23);
+            btnNewButton.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    new Menu(idUser).setVisible(true);
+                }
+            }
+            );
+
             JTable table = new JTable(data, columns);
             table.setShowGrid(true);
             table.setShowVerticalLines(true);
@@ -283,6 +297,7 @@ public class CatalogueOffre {
             JPanel panel = new JPanel();
             panel.add(lblNewLabel);
             panel.add(pane);
+            panel.add(btnNewButton);
             f.add(panel);
             f.setBounds(100, 100, 800, 600);
             f.setVisible(true);

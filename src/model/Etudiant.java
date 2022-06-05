@@ -1,4 +1,7 @@
-package src.vue;
+package src.model;
+
+import src.vue.EspaceAdmin;
+import src.vue.EspaceCommision;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,7 +10,7 @@ import java.sql.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class ListEtudiant
+public class Etudiant
 {
     private String nom;
     private String prenom;
@@ -16,7 +19,7 @@ public class ListEtudiant
     private String tel;
     private String password;
 
-    public ListEtudiant(String rolee)
+    public Etudiant(String rolee)
     {
         try
         {

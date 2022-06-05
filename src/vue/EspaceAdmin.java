@@ -1,5 +1,6 @@
 package src.vue;
-import src.model.UserRegistration;
+
+import src.model.Etudiant;
 
 import java.awt.EventQueue;
 
@@ -78,7 +79,7 @@ public class EspaceAdmin extends JFrame {
         btnConsulterListEtudiant.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new ListEtudiant("Admin");
+                new Etudiant("Admin");
         }
         });
         btnConsulterListEtudiant.setBounds(447, 491, 227, 67);

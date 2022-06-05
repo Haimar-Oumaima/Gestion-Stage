@@ -48,7 +48,6 @@ public class ConventionVue extends JFrame {
      */
     public ConventionVue(String idCatalogue) throws SQLException, ClassNotFoundException {
 
-
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 700);
         contentPane = new JPanel();
