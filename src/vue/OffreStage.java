@@ -130,15 +130,14 @@ public class OffreStage extends JFrame {
             public void actionPerformed(ActionEvent e) {
 
                 try {
-                    PreparedStatement pst= Connexion.GetCon().prepareStatement("INSERT INTO offre(user_id, entrepriseAccueil, sujetStage, missions, poste, lieu, montantIdemnite) VALUES(?,?,?,?,?,?,?)");
+                    PreparedStatement pst= Connexion.GetCon().prepareStatement("INSERT INTO offre( entrepriseAccueil, sujetStage, missions, poste, lieu, montantIdemnite) VALUES(?,?,?,?,?,?)");
                     pst.clearParameters();
-                    pst.setString(1,1+"");
-                    pst.setString(2,textField_0.getText());
-                    pst.setString(3,textField.getText());
-                    pst.setString(4,textField_1.getText());
-                    pst.setString(5,textField_2.getText());
-                    pst.setString(6,textField_3.getText());
-                    pst.setInt(7, Integer.parseInt(textField_4.getText()));
+                    pst.setString(1,textField_0.getText());
+                    pst.setString(2,textField.getText());
+                    pst.setString(3,textField_1.getText());
+                    pst.setString(4,textField_2.getText());
+                    pst.setString(5,textField_3.getText());
+                    pst.setInt(6, Integer.parseInt(textField_4.getText()));
                     pst.executeUpdate();
 
                     /* Pop Up*/

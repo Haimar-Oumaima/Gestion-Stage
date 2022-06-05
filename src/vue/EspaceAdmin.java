@@ -77,6 +77,8 @@ public class EspaceAdmin extends JFrame {
         JButton btnConsulterListEtudiant = new JButton("Consulter la liste des Etudiants");
         btnConsulterListEtudiant.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new ListEtudiant();
         }
         });
         btnConsulterListEtudiant.setBounds(447, 491, 227, 67);
@@ -97,6 +99,12 @@ public class EspaceAdmin extends JFrame {
         contentPane.add(btnConsulterLesConventions);
 
         JButton btnNewButton = new JButton("Ajouter une offre de stage");
+        btnNewButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+                new OffreStage().setVisible(true);
+            }
+        });
         btnNewButton.setBounds(154, 360, 227, 67);
         contentPane.add(btnNewButton);
         }

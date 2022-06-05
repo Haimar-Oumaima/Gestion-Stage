@@ -37,7 +37,6 @@ public class Menu extends JFrame {
 
     private void initializeWidthIdUser(int idUser) {
         this.idUser = idUser;
-        System.out.println("idUser : " + idUser);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 700);
         contentPane = new JPanel();
@@ -62,7 +61,8 @@ public class Menu extends JFrame {
         btnConsulterMesOffres.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new ListeOffre();
+                System.out.println("idUser2 : " + idUser);
+                new ListeOffre(idUser);
             }
         });
         btnConsulterMesOffres.setBounds(287, 243, 271, 83);

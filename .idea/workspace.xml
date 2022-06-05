@@ -6,16 +6,17 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="Ajout etablir Convention">
-      <change afterPath="$PROJECT_DIR$/src/vue/ListUser.java" afterDir="false" />
+    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="bcp de modifs">
+      <change afterPath="$PROJECT_DIR$/src/vue/Catalogue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/DetailsOffre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/DetailsOffreVue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/ListEtudiant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UserHome.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UserRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sql/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sql/Connexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/EspaceAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/EspaceAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/ListUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/ListeOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListeOffre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/OffreStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/OffreStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +60,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.EspaceAdmin">
+  <component name="RunManager" selected="Application.src.vue.Login">
     <configuration name="EspaceAdmin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="src.vue.EspaceAdmin" />
       <module name="gestion-stage" />
@@ -112,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserRegistration" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.model.UserRegistration" />
+    <configuration name="src.vue.DetailsOffreVue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.vue.DetailsOffreVue" />
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.model.*" />
+          <option name="PATTERN" value="src.vue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.EspaceAdmin" />
-        <item itemvalue="Application.Menu" />
-        <item itemvalue="Application.Login" />
+        <item itemvalue="Application.src.vue.Login" />
         <item itemvalue="Application.UserLogin" />
-        <item itemvalue="Application.UserRegistration" />
+        <item itemvalue="Application.src.vue.Menu" />
+        <item itemvalue="Application.src.vue.DetailsOffreVue" />
+        <item itemvalue="Application.src.vue.EspaceAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +155,7 @@
       <workItem from="1654271485429" duration="2202000" />
       <workItem from="1654310805174" duration="598000" />
       <workItem from="1654358733481" duration="6266000" />
-      <workItem from="1654371668461" duration="9199000" />
+      <workItem from="1654371668461" duration="20639000" />
     </task>
     <task id="LOCAL-00001" summary="interface connexion &amp; ajout offre &amp; Menu">
       <created>1653887373878</created>
@@ -212,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653962925739</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="bcp de modifs">
+      <created>1654381247615</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1654381247615</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +243,7 @@
     <MESSAGE value="update OffreStage" />
     <MESSAGE value="ajout registration &amp; login &amp; offres validé" />
     <MESSAGE value="Ajout etablir Convention" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout etablir Convention" />
+    <MESSAGE value="bcp de modifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="bcp de modifs" />
   </component>
 </project>
