@@ -68,11 +68,11 @@ public class Menu extends JFrame {
         btnConsulterMesOffres.setBounds(287, 243, 271, 83);
         contentPane.add(btnConsulterMesOffres);
 
-        JButton btnOffreValides = new JButton("Offre Validées");
+        JButton btnOffreValides = new JButton("Suivre Mes Offres");
         btnOffreValides.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                OffreValide offreValide = new OffreValide("Offre Validées");
+                CatalogueOffre catalogueOffre = new CatalogueOffre("Offre Validées", idUser);
             }
         });
         btnOffreValides.setBounds(287, 375, 271, 83);
@@ -82,7 +82,7 @@ public class Menu extends JFrame {
         btnConvention.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new OffreValide("Convention");
+                new CatalogueOffre("Convention");
             }
         });
         btnConvention.setBounds(287, 500, 271, 83);
@@ -138,7 +138,7 @@ public class Menu extends JFrame {
         btnOffreValides.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                OffreValide offreValide = new OffreValide("Offre Validées");
+                CatalogueOffre catalogueOffre = new CatalogueOffre("Offre Validées");
 
             }
         });
@@ -149,7 +149,7 @@ public class Menu extends JFrame {
         btnConvention.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new OffreValide("Convention");
+                new CatalogueOffre("Convention");
             }
         });
         btnConvention.setBounds(287, 500, 271, 83);

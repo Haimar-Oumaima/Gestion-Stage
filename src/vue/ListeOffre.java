@@ -1,5 +1,7 @@
 package src.vue;
 
+import src.model.DetailsOffre;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,8 +9,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.*;
 import javax.swing.*;
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import static java.lang.Integer.parseInt;
 
@@ -176,7 +176,6 @@ public class ListeOffre
                     int row = table.getSelectedRow();
                     int column = table.getSelectedColumn();
                     String IdOffre = (String) table.getValueAt(row, 0);
-                    System.out.println("id de l'offre est: "+ IdOffre);
                     if (IdOffre != null) {
                         try {
                             new DetailsOffre(parseInt(IdOffre.toString()) , idUser);

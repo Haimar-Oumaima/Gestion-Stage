@@ -1,11 +1,10 @@
-package src.vue;
+package src.model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import src.vue.DetailsOffreVue;
+
 import java.sql.*;
 
-
-public class DetailsOffre {
+public class ConventionModel {
     String entrepriseAccueil;
     String sujetStage;
     String missions;
@@ -15,7 +14,7 @@ public class DetailsOffre {
     int idOffre;
     int idUser;
 
-    public DetailsOffre(int id) throws ClassNotFoundException, SQLException {
+    public ConventionModel(int id) throws ClassNotFoundException, SQLException {
         Class.forName("com.mysql.cj.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage", "root", "root");
 
@@ -40,8 +39,7 @@ public class DetailsOffre {
 
     }
 
-
-    public DetailsOffre(int idOffre, int idUser) throws SQLException, ClassNotFoundException {
+    public ConventionModel(int idOffre, int idUser) throws SQLException, ClassNotFoundException {
         this.idUser = idUser;
         initializeWithIdUser(idOffre, idUser);
     }
@@ -69,5 +67,4 @@ public class DetailsOffre {
         }
     }
 }
-
 

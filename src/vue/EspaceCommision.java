@@ -16,23 +16,6 @@ import java.awt.event.ActionEvent;
 public class EspaceCommision extends JFrame {
 
     private JPanel contentPane;
-
-    /**
-     * Launch the application.
-     */
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                  //  EspaceCommision frame = new EspaceCommision(int id);
-                  //  frame.setVisible(true);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
-    }
-
     /**
      * Create the frame.
      */
@@ -48,6 +31,8 @@ public class EspaceCommision extends JFrame {
         JButton btnValiderOffre = new JButton("Valider offre");
         btnValiderOffre.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                CatalogueOffre ca = new CatalogueOffre("commision");
+                dispose();
             }
         });
         btnValiderOffre.setBounds(154, 234, 227, 78);

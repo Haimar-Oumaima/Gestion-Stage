@@ -7,10 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="navigation entre fenetre @ EspaceCommision @ mise a jour selected offre">
+      <change afterPath="$PROJECT_DIR$/src/model/ConventionModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/CatalogueOffre.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/vue/ConventionVue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/Catalogue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/DetailsOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/DetailsOffre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/DetailsOffreVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/DetailsOffreVue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/EspaceCommision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/EspaceCommision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/ListeOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListeOffre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/OffreValide.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,12 +62,12 @@
   }
 }</component>
   <component name="RunManager" selected="Application.UserLogin">
-    <configuration name="DetailsOffreVue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="src.vue.DetailsOffreVue" />
+    <configuration name="ConventionVue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.vue.ConventionVue" />
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.vue.*" />
+          <option name="PATTERN" value="src.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -73,7 +80,7 @@
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.vue.*" />
+          <option name="PATTERN" value="src.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,7 +106,7 @@
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.vue.*" />
+          <option name="PATTERN" value="src.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,7 +119,7 @@
       <module name="gestion-stage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="src.vue.*" />
+          <option name="PATTERN" value="src.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,10 +130,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.UserLogin" />
+        <item itemvalue="Application.ConventionVue" />
         <item itemvalue="Application.src.vue.EspaceAdmin" />
-        <item itemvalue="Application.LoginAdmin" />
+        <item itemvalue="Application.src.vue.LoginAdmin" />
         <item itemvalue="Application.src.vue.Menu" />
-        <item itemvalue="Application.src.vue.DetailsOffreVue" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +156,8 @@
       <workItem from="1654271485429" duration="2202000" />
       <workItem from="1654310805174" duration="598000" />
       <workItem from="1654358733481" duration="6266000" />
-      <workItem from="1654371668461" duration="31992000" />
+      <workItem from="1654371668461" duration="32655000" />
+      <workItem from="1654436966114" duration="14064000" />
     </task>
     <task id="LOCAL-00001" summary="interface connexion &amp; ajout offre &amp; Menu">
       <created>1653887373878</created>
@@ -228,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654412050805</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="navigation entre fenetre @ EspaceCommision @ mise a jour selected offre">
+      <created>1654414300349</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654414300349</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

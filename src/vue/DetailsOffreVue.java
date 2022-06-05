@@ -145,12 +145,10 @@ public class DetailsOffreVue extends JFrame {
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                //new ListeOffre();
             }
         });
 
         btnNewButton_1.setBounds(41, 27, 117, 29);
-
         contentPane.add(btnNewButton_1);
 
         textFieldEntrp = new JTextField();
