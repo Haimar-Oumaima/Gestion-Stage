@@ -12,17 +12,17 @@ import java.sql.PreparedStatement;
 public class OffreStage extends JFrame {
 
     private JPanel contentPane;
-    private JTextField textField;
-    private JTextField textField_1;
+    private JTextField txtFieldSujet;
+    private JTextField txtFieldMissions;
     private JLabel lblNewLabel_1;
     private JLabel lblNewLabel_2;
     private JLabel lblNewLabel_3;
     private JLabel lblNewLabel_4;
     private JLabel lblNewLabel_5;
-    private JTextField textField_2;
-    private JTextField textField_3;
-    private JTextField textField_4;
-    private JTextField textField_0;
+    private JTextField txtFieldPoste;
+    private JTextField TxtFieldLieu;
+    private JTextField txtFieldMontant;
+    private JTextField txtFieldEntreprise;
     private JLabel lblNewLabel_6;
 
 
@@ -33,8 +33,8 @@ public class OffreStage extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    OffreStage frame = new OffreStage();
-                    frame.setVisible(true);
+                    //OffreStage frame = new OffreStage();
+                 //   frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -45,7 +45,7 @@ public class OffreStage extends JFrame {
     /**
      * Create the frame.
      */
-    public OffreStage() {
+    public OffreStage(String rolee) {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 700);
         contentPane = new JPanel();
@@ -61,41 +61,41 @@ public class OffreStage extends JFrame {
         contentPane.add(lblNewLabel);
 
 
-        textField_0 = new JTextField();
-        textField_0.setBackground(new Color(248, 248, 255));
-        textField_0.setColumns(10);
-        textField_0.setBounds(264, 144, 306, 47);
-        contentPane.add(textField_0);
+        txtFieldEntreprise = new JTextField();
+        txtFieldEntreprise.setBackground(new Color(248, 248, 255));
+        txtFieldEntreprise.setColumns(10);
+        txtFieldEntreprise.setBounds(264, 144, 306, 47);
+        contentPane.add(txtFieldEntreprise);
 
-        textField = new JTextField();
-        textField.setBackground(new Color(248, 248, 255));
-        textField.setBounds(264, 203, 306, 47);
-        contentPane.add(textField);
-        textField.setColumns(10);
+        txtFieldSujet = new JTextField();
+        txtFieldSujet.setBackground(new Color(248, 248, 255));
+        txtFieldSujet.setBounds(264, 203, 306, 47);
+        contentPane.add(txtFieldSujet);
+        txtFieldSujet.setColumns(10);
 
-        textField_1 = new JTextField();
-        textField_1.setBackground(new Color(248, 248, 255));
-        textField_1.setBounds(264, 262, 306, 106);
-        contentPane.add(textField_1);
-        textField_1.setColumns(10);
+        txtFieldMissions = new JTextField();
+        txtFieldMissions.setBackground(new Color(248, 248, 255));
+        txtFieldMissions.setBounds(264, 262, 306, 106);
+        contentPane.add(txtFieldMissions);
+        txtFieldMissions.setColumns(10);
 
-        textField_2 = new JTextField();
-        textField_2.setBackground(new Color(248, 248, 255));
-        textField_2.setColumns(10);
-        textField_2.setBounds(264, 390, 306, 47);
-        contentPane.add(textField_2);
+        txtFieldPoste = new JTextField();
+        txtFieldPoste.setBackground(new Color(248, 248, 255));
+        txtFieldPoste.setColumns(10);
+        txtFieldPoste.setBounds(264, 390, 306, 47);
+        contentPane.add(txtFieldPoste);
 
-        textField_3 = new JTextField();
-        textField_3.setBackground(new Color(248, 248, 255));
-        textField_3.setColumns(10);
-        textField_3.setBounds(264, 451, 306, 47);
-        contentPane.add(textField_3);
+        TxtFieldLieu = new JTextField();
+        TxtFieldLieu.setBackground(new Color(248, 248, 255));
+        TxtFieldLieu.setColumns(10);
+        TxtFieldLieu.setBounds(264, 451, 306, 47);
+        contentPane.add(TxtFieldLieu);
 
-        textField_4 = new JTextField();
-        textField_4.setBackground(new Color(248, 248, 255));
-        textField_4.setColumns(10);
-        textField_4.setBounds(264, 523, 306, 47);
-        contentPane.add(textField_4);
+        txtFieldMontant = new JTextField();
+        txtFieldMontant.setBackground(new Color(248, 248, 255));
+        txtFieldMontant.setColumns(10);
+        txtFieldMontant.setBounds(264, 523, 306, 47);
+        contentPane.add(txtFieldMontant);
 
 
         lblNewLabel_6 = new JLabel("Entreprise d'accueil");
@@ -132,12 +132,12 @@ public class OffreStage extends JFrame {
                 try {
                     PreparedStatement pst= Connexion.GetCon().prepareStatement("INSERT INTO offre( entrepriseAccueil, sujetStage, missions, poste, lieu, montantIdemnite) VALUES(?,?,?,?,?,?)");
                     pst.clearParameters();
-                    pst.setString(1,textField_0.getText());
-                    pst.setString(2,textField.getText());
-                    pst.setString(3,textField_1.getText());
-                    pst.setString(4,textField_2.getText());
-                    pst.setString(5,textField_3.getText());
-                    pst.setInt(6, Integer.parseInt(textField_4.getText()));
+                    pst.setString(1, txtFieldEntreprise.getText());
+                    pst.setString(2, txtFieldSujet.getText());
+                    pst.setString(3, txtFieldMissions.getText());
+                    pst.setString(4, txtFieldPoste.getText());
+                    pst.setString(5, TxtFieldLieu.getText());
+                    pst.setInt(6, Integer.parseInt(txtFieldMontant.getText()));
                     pst.executeUpdate();
 
                     /* Pop Up*/
@@ -154,8 +154,13 @@ public class OffreStage extends JFrame {
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                Menu menu=new Menu();
-                menu.setVisible(true);
+                if(rolee.equals("Etudiant")){
+                    Menu menu=new Menu();
+                    menu.setVisible(true);
+                } else if (rolee.equals("Admin")){
+                    new EspaceAdmin().setVisible(true);
+
+                }
             }
         });
         btnNewButton_1.setBounds(41, 27, 117, 29);

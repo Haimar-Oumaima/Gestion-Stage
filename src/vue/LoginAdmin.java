@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Login extends JFrame implements ActionListener {
+public class LoginAdmin extends JFrame implements ActionListener {
 
     /**
      * Launch the application.
@@ -14,7 +14,7 @@ public class Login extends JFrame implements ActionListener {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Login frame = new Login();
+                    LoginAdmin frame = new LoginAdmin();
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -37,7 +37,7 @@ public class Login extends JFrame implements ActionListener {
     JLabel lblMonStage = new JLabel("Mon Stage (admin)");
 
 
-    Login() {
+    LoginAdmin() {
         setLayoutManager();
         setLocationAndSize();
         addComponentsToContainer();

@@ -116,9 +116,7 @@ public class DetailsOffreVue extends JFrame {
                 System.out.println(idOffre);
                 System.out.println(idUser);
 
-
                 try {
-
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage","root","root");
                     String query = "INSERT INTO catalogue (offre_id, account_id) VALUES (?, ?)";
@@ -131,16 +129,12 @@ public class DetailsOffreVue extends JFrame {
                     rs.next();
                     int idResult = rs.getInt(1);
 
-
                     if (idResult > 0) {
                         JOptionPane.showMessageDialog(null, "Votre demande est en cours de traitement");
                     }
-
                 } catch (SQLException | ClassNotFoundException ex) {
                     throw new RuntimeException(ex);
                 }
-
-
             }
         });
         btnAjoutCatalogue.setBounds(352, 590, 160, 38);
@@ -150,9 +144,13 @@ public class DetailsOffreVue extends JFrame {
         JButton btnNewButton_1 = new JButton("Retour");
         btnNewButton_1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                dispose();
+                //new ListeOffre();
             }
         });
+
         btnNewButton_1.setBounds(41, 27, 117, 29);
+
         contentPane.add(btnNewButton_1);
 
         textFieldEntrp = new JTextField();

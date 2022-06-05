@@ -3,19 +3,20 @@ package src.vue;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.sql.*;
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
-
 import static java.lang.Integer.parseInt;
 
 public class ListeOffre
 {
     int idUser = 0;
 
-    private void initialize (){
+    private void initialize (String rolee) {
         try
         {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -92,14 +93,21 @@ public class ListeOffre
             btnRetour.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     f.dispose();
-                    Menu menu=new Menu();
-                    menu.setVisible(true);
+                    if(rolee == "Espace Commission"){
+                        new EspaceCommision().setVisible(true);
+
+                    } else if (rolee == "Etudiant"){
+                        Menu menu=new Menu();
+                        menu.setVisible(true);
+                    }else if (rolee == "Admin"){
+                        new EspaceAdmin().setVisible(true);
+                    }
                 }
             });
             btnRetour.setBounds(41, 27, 117, 29);
             panel.add(btnRetour);
 
-            f.setSize(800, 700);
+            f.setBounds(100,100,800, 700);
             f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             f.setVisible(true);
 
@@ -145,20 +153,35 @@ public class ListeOffre
                 i++;
             }
 
-            JLabel lblNewLabel = new JLabel("La liste de vos offres de stage");
+            JLabel lblNewLabel = new JLabel("La liste des offres de stage");
             lblNewLabel.setForeground(new Color(0, 0, 128));
             lblNewLabel.setFont(new Font("Kokonor", Font.BOLD, 30));
             lblNewLabel.setBounds(353, 0, 140, 60);
 
-            DefaultTableModel model = new DefaultTableModel(data, columns);
-            JTable table = new JTable(model);
+
+        //    DefaultTableModel model = new DefaultTableModel(data, columns);
+            JTable table = new JTable(data, columns);
             table.setShowGrid(true);
             table.setShowVerticalLines(true);
+            table.isEditing();
             JScrollPane pane = new JScrollPane(table);
 
-            model.addTableModelListener(new TableModelListener() {
-                @Override
-                public void tableChanged(TableModelEvent e) {
+            table.addMouseListener( new MouseAdapter() {
+                public void mouseClicked(MouseEvent e) {
+                    int row = table.getSelectedRow();
+                    int column = table.getSelectedColumn();
+                    String IdOffre = (String) table.getValueAt(row, 0);
+                    System.out.println("id de l'offre est: "+ IdOffre);
+                    if (IdOffre != null) {
+                        try {
+                            new DetailsOffre(parseInt(IdOffre.toString()) , idUser);
+                } catch (SQLException ex) {
+                            throw new RuntimeException(ex);
+                        } catch (ClassNotFoundException ex) {
+                            throw new RuntimeException(ex);
+                        }
+                    }
+              /* public void tableChanged(TableModelEvent e) {
                     int row = e.getFirstRow();
                     int column = e.getColumn();
                     String columnName = table.getColumnName(0);
@@ -171,7 +194,7 @@ public class ListeOffre
                         } catch (ClassNotFoundException ex) {
                             throw new RuntimeException(ex);
                         }
-                    }
+                    }*/
                 }
             });
 
@@ -181,18 +204,27 @@ public class ListeOffre
             panel.add(pane);
             f.add(panel);
 
+            JButton btnDetail = new JButton("Voir les détails");
+            btnDetail.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                }
+            });
+            btnDetail.setBounds(41, 27, 117, 29);
+            panel.add(btnDetail);
+
             JButton btnRetour = new JButton("Retour");
             btnRetour.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     f.dispose();
-                    Menu menu=new Menu();
+                    Menu menu=new Menu(idUser);
                     menu.setVisible(true);
                 }
             });
             btnRetour.setBounds(41, 27, 117, 29);
             panel.add(btnRetour);
 
-            f.setSize(800, 700);
+
+            f.setBounds(0,0,800, 700);
             f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             f.setVisible(true);
 
@@ -202,9 +234,9 @@ public class ListeOffre
             throw new RuntimeException(e);
         }
     }
-    public ListeOffre()
+    public ListeOffre(String rolee)
     {
-        initialize();
+        initialize(rolee);
     }
 
     public ListeOffre(int idUser) {

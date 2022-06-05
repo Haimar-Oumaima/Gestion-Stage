@@ -9,7 +9,14 @@ import javax.swing.table.DefaultTableModel;
 
 public class ListEtudiant
 {
-    public ListEtudiant()
+    private String nom;
+    private String prenom;
+    private String email;
+    private String role;
+    private String tel;
+    private String password;
+
+    public ListEtudiant(String rolee)
     {
         try
         {
@@ -29,12 +36,12 @@ public class ListEtudiant
             int i = 0;
             while (res.next()) {
                 int id = res.getInt("id");
-                String nom = res.getString("firstname");
-                String prenom = res.getString("lastname");
-                String email = res.getString("email");
-                String role = res.getString("role");
-                String tel = res.getString("phone_number");
-                String password = res.getString("password");
+                 nom = res.getString("firstname");
+                 prenom = res.getString("lastname");
+                 email = res.getString("email");
+                 role = res.getString("role");
+                 tel = res.getString("phone_number");
+                 password = res.getString("password");
 
                 data[i][0] = String.valueOf(id);
                 data[i][1] = nom;
@@ -67,8 +74,17 @@ public class ListEtudiant
             btnRetour.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     f.dispose();
-                    EspaceAdmin espaceAdmin = new EspaceAdmin();
-                    espaceAdmin.setVisible(true);
+                    if(rolee.equals("Admin"))
+                    {
+                        EspaceAdmin espaceAdmin = new EspaceAdmin();
+                        espaceAdmin.setVisible(true);
+                    }
+                    else if(rolee.equals("Espace Commision"))
+                    {
+                        EspaceCommision espaceCommission = new EspaceCommision();
+                        espaceCommission.setVisible(true);
+                    }
+
                 }
             });
             btnRetour.setBounds(41, 27, 117, 29);

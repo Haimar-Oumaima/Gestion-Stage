@@ -1,5 +1,6 @@
 package src.model;
 
+import src.vue.EspaceCommision;
 import src.vue.Menu;
 
 import java.awt.Color;
@@ -24,7 +25,7 @@ import javax.swing.border.EmptyBorder;
 public class UserLogin extends JFrame {
 
     private static final long serialVersionUID = 1L;
-    private JTextField textField;
+    private JTextField textFieldUserLogin;
     private JPasswordField passwordField;
     private JButton btnNewButton;
     private JLabel label;
@@ -52,6 +53,7 @@ public class UserLogin extends JFrame {
     public UserLogin() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 800, 700);
+        setBackground(new Color(230, 230, 250));
         setResizable(false);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -64,11 +66,11 @@ public class UserLogin extends JFrame {
         lblNewLabel.setBounds(300, 13, 273, 93);
         contentPane.add(lblNewLabel);
 
-        textField = new JTextField();
-        textField.setFont(new Font("Tahoma", Font.PLAIN, 25));
-        textField.setBounds(300, 190, 281, 68);
-        contentPane.add(textField);
-        textField.setColumns(10);
+        textFieldUserLogin = new JTextField();
+        textFieldUserLogin.setFont(new Font("Tahoma", Font.PLAIN, 25));
+        textFieldUserLogin.setBounds(300, 190, 281, 68);
+        contentPane.add(textFieldUserLogin);
+        textFieldUserLogin.setColumns(10);
 
         passwordField = new JPasswordField();
         passwordField.setFont(new Font("Tahoma", Font.PLAIN, 25));
@@ -95,33 +97,43 @@ public class UserLogin extends JFrame {
         btnNewButton.addActionListener(new ActionListener() {
 
             public void actionPerformed(ActionEvent e) {
-                String userName = textField.getText();
+                String userName = textFieldUserLogin.getText();
                 String password = passwordField.getText();
                 try {
                     Class.forName("com.mysql.cj.jdbc.Driver");
                     Connection con = DriverManager.getConnection("jdbc:mysql://localhost:8889/gestion_stage", "root", "root");
 
-                    PreparedStatement st = (PreparedStatement) con
-                            .prepareStatement("Select * from account where firstname=? and password=?");
+                    PreparedStatement st = (PreparedStatement) con.prepareStatement("Select * from account where firstname=? and password=?");
 
                     st.setString(1, userName);
                     st.setString(2, password);
                     ResultSet rs = st.executeQuery();
                     if (rs.next()) {
                         int idUser = rs.getInt("id");
-
                         if (rs.getString("role").equals("Etudiant")) {
 
                             dispose();
                             Menu menu = new Menu(idUser);
                             menu.setVisible(true);
                             JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie etudiant");
+
                         } else if (rs.getString("role").equals("Directeur")) {
                             dispose();
-                            JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie direct");
+                            JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie directeur");
+
                         } else if (rs.getString("role").equals("Admin")) {
                             dispose();
                             JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie admin");
+
+                        } else if ( rs.getString("role").equals("Enseignant")) {
+                            dispose();
+                            JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie enseignant");
+                            EspaceCommision enseignant = new EspaceCommision();
+                            enseignant.setVisible(true);
+
+                        } else if ( rs.getString("role").equals("Tuteur entreprise")) {
+                            dispose();
+                            JOptionPane.showMessageDialog(btnNewButton, "Connexion réussie tuteur entreprise");
                         }
 
                     } else {

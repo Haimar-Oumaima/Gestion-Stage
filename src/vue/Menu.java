@@ -45,19 +45,19 @@ public class Menu extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JButton btnAjoutOffre = new JButton("Ajouter une offre");
+        JButton btnAjoutOffre = new JButton("Ajouter une offre trouvée");
         btnAjoutOffre.setBackground(new Color(255, 255, 255));
         btnAjoutOffre.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                OffreStage stg = new OffreStage();
+                OffreStage stg = new OffreStage("Etudiant");
                 stg.setVisible(true);
             }
         });
         btnAjoutOffre.setBounds(287, 122, 271, 83);
         contentPane.add(btnAjoutOffre);
 
-        JButton btnConsulterMesOffres = new JButton("Consulter mes offres");
+        JButton btnConsulterMesOffres = new JButton("Consulter les offres proposées");
         btnConsulterMesOffres.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
@@ -73,7 +73,6 @@ public class Menu extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
                 OffreValide offreValide = new OffreValide("Offre Validées");
-
             }
         });
         btnOffreValides.setBounds(287, 375, 271, 83);
@@ -118,7 +117,7 @@ public class Menu extends JFrame {
         btnAjoutOffre.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                OffreStage stg = new OffreStage();
+                OffreStage stg = new OffreStage("Etudiant");
                 stg.setVisible(true);
             }
         });
@@ -129,7 +128,7 @@ public class Menu extends JFrame {
         btnConsulterMesOffres.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new ListeOffre();
+                new ListeOffre("Etudiant");
             }
         });
         btnConsulterMesOffres.setBounds(287, 243, 271, 83);
@@ -175,12 +174,7 @@ public class Menu extends JFrame {
         initialize();
     }
 
-    /**
-     * Create the frame.
-     */
     public Menu(int idUser) {
-
-
         initializeWidthIdUser(idUser);
     }
 }

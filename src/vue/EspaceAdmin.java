@@ -68,7 +68,7 @@ public class EspaceAdmin extends JFrame {
         btnConsulterLesOffres.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                 new ListeOffre();
+                 new ListeOffre("Admin");
               }
         });
         btnConsulterLesOffres.setBounds(447, 360, 227, 67);
@@ -78,7 +78,7 @@ public class EspaceAdmin extends JFrame {
         btnConsulterListEtudiant.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new ListEtudiant();
+                new ListEtudiant("Admin");
         }
         });
         btnConsulterListEtudiant.setBounds(447, 491, 227, 67);
@@ -91,6 +91,11 @@ public class EspaceAdmin extends JFrame {
         contentPane.add(lblNewLabel);
 
         JButton btnLogout = new JButton("Logout");
+        btnLogout.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+            }
+        });
         btnLogout.setBounds(656, 30, 117, 29);
         contentPane.add(btnLogout);
 
@@ -102,7 +107,7 @@ public class EspaceAdmin extends JFrame {
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
-                new OffreStage().setVisible(true);
+                new OffreStage("Admin").setVisible(true);
             }
         });
         btnNewButton.setBounds(154, 360, 227, 67);
