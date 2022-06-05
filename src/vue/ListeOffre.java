@@ -52,7 +52,7 @@ public class ListeOffre
                 i++;
             }
 
-            JLabel lblNewLabel = new JLabel("La liste de vos offres de stage");
+            JLabel lblNewLabel = new JLabel("La liste de tous les offres de stage");
             lblNewLabel.setForeground(new Color(0, 0, 128));
             lblNewLabel.setFont(new Font("Kokonor", Font.BOLD, 30));
             lblNewLabel.setBounds(353, 0, 140, 60);
@@ -63,7 +63,7 @@ public class ListeOffre
             table.setShowVerticalLines(true);
             JScrollPane pane = new JScrollPane(table);
 
-            model.addTableModelListener(new TableModelListener() {
+          /*  model.addTableModelListener(new TableModelListener() {
                 @Override
                 public void tableChanged(TableModelEvent e) {
                     int row = e.getFirstRow();
@@ -81,7 +81,7 @@ public class ListeOffre
                         }
                     }
                 }
-            });
+            });*/
 
             JFrame f = new JFrame("Liste Offres");
             JPanel panel = new JPanel();
@@ -97,7 +97,7 @@ public class ListeOffre
                         new EspaceCommision().setVisible(true);
 
                     } else if (rolee == "Etudiant"){
-                        Menu menu=new Menu();
+                        Menu menu=new Menu(idUser);
                         menu.setVisible(true);
                     }else if (rolee == "Admin"){
                         new EspaceAdmin().setVisible(true);
@@ -155,8 +155,13 @@ public class ListeOffre
 
             JLabel lblNewLabel = new JLabel("La liste des offres de stage");
             lblNewLabel.setForeground(new Color(0, 0, 128));
-            lblNewLabel.setFont(new Font("Kokonor", Font.BOLD, 30));
+            lblNewLabel.setFont(new Font("Lucida Grande", Font.BOLD, 28));
             lblNewLabel.setBounds(353, 0, 140, 60);
+
+            JLabel lblInfo = new JLabel("Cliquer pour voir en détail et pour ajouter l'offre à votre catalogue");
+            lblInfo.setForeground(new Color(0, 0, 128));
+            lblInfo.setFont(new Font("Lucida Grande", Font.BOLD, 22));
+            lblInfo.setBounds(353, 30, 140, 60);
 
 
         //    DefaultTableModel model = new DefaultTableModel(data, columns);
@@ -201,6 +206,7 @@ public class ListeOffre
             JFrame f = new JFrame("Liste Offres");
             JPanel panel = new JPanel();
             panel.add(lblNewLabel);
+            panel.add(lblInfo);
             panel.add(pane);
             f.add(panel);
 

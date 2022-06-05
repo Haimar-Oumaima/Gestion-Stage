@@ -80,6 +80,11 @@ public class EspaceCommision extends JFrame {
         contentPane.add(lblNewLabel);
 
         JButton btnLogout = new JButton("Logout");
+        btnLogout.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
         btnLogout.setBounds(657, 40, 117, 29);
         contentPane.add(btnLogout);
 

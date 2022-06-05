@@ -130,7 +130,7 @@ public class DetailsOffreVue extends JFrame {
                     int idResult = rs.getInt(1);
 
                     if (idResult > 0) {
-                        JOptionPane.showMessageDialog(null, "Votre demande est en cours de traitement");
+                        JOptionPane.showMessageDialog(null, "L'offre a été ajouter à votre catalogue, Votre demande est en cours de traitement");
                     }
                 } catch (SQLException | ClassNotFoundException ex) {
                     throw new RuntimeException(ex);

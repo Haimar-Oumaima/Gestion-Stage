@@ -6,17 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="bzef dial lhweyj nssit hh">
-      <change afterPath="$PROJECT_DIR$/src/vue/EspaceCommision.java" afterDir="false" />
+    <list default="true" id="08a484f8-fedd-46c3-9733-93fa2948e2b1" name="Changes" comment="navigation entre fenetre @ EspaceCommision @ mise a jour selected offre">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/UserLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/DetailsOffreVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/DetailsOffreVue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/EspaceAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/EspaceAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/ListEtudiant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListEtudiant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vue/EspaceCommision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/EspaceCommision.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/vue/ListeOffre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/ListeOffre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/LoginAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vue/OffreStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/vue/OffreStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,10 +123,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.UserLogin" />
+        <item itemvalue="Application.src.vue.EspaceAdmin" />
         <item itemvalue="Application.LoginAdmin" />
         <item itemvalue="Application.src.vue.Menu" />
         <item itemvalue="Application.src.vue.DetailsOffreVue" />
-        <item itemvalue="Application.src.vue.EspaceAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +149,7 @@
       <workItem from="1654271485429" duration="2202000" />
       <workItem from="1654310805174" duration="598000" />
       <workItem from="1654358733481" duration="6266000" />
-      <workItem from="1654371668461" duration="29686000" />
+      <workItem from="1654371668461" duration="31992000" />
     </task>
     <task id="LOCAL-00001" summary="interface connexion &amp; ajout offre &amp; Menu">
       <created>1653887373878</created>
@@ -227,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654402817351</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="navigation entre fenetre @ EspaceCommision @ mise a jour selected offre">
+      <created>1654412050805</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654412050805</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +253,7 @@
     <MESSAGE value="Ajout etablir Convention" />
     <MESSAGE value="bcp de modifs" />
     <MESSAGE value="bzef dial lhweyj nssit hh" />
-    <option name="LAST_COMMIT_MESSAGE" value="bzef dial lhweyj nssit hh" />
+    <MESSAGE value="navigation entre fenetre @ EspaceCommision @ mise a jour selected offre" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigation entre fenetre @ EspaceCommision @ mise a jour selected offre" />
   </component>
 </project>
